@@ -2,7 +2,7 @@
   import { useStateStore } from '../stores/state'
   const state = useStateStore()
 
-  const handleClick = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault()
     state.incrementProgress()
     console.log(state.progress)
@@ -11,11 +11,10 @@
 
 <template>
   <h4 class="mb-4">login</h4>
-  <form action="#">
+  <form action="#" @submit="handleSubmit">
     <div class="flex flex-col gap-2 mb-2 [&>input]:border [&>input]:p-2">
       <input type="text" placeholder="username">
       <input type="password" placeholder="password">
     </div>
-    <button type="submit" @click="handleClick" class="block bg-black text-white w-full p-2">submit</button>
   </form>
 </template>

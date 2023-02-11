@@ -9,5 +9,5 @@ export const useStateStore = defineStore('state', () => {
     progress.value++
   }
 
-  return { progress, incrementProgress, authenticated, }
+  return { progress, incrementProgress, authenticated }
 })
