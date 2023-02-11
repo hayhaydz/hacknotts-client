@@ -9,7 +9,7 @@
   const handleSubmit = async (e) => {
     e.preventDefault()
     let data = { username: username.value, password: password.value }
-    const response = await fetch('https://1b5f-128-243-2-19.eu.ngrok.io/api/auth/login', {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)

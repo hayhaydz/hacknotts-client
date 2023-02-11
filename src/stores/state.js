@@ -6,11 +6,11 @@ export const useStateStore = defineStore('state', () => {
   const token = ref('')
   const isError = ref(false)
   const message = ref('')
-  const authenticated = ref(false)
+  const isAuthenticated = ref(false)
 
   const incrementProgress = () => {
     progress.value++
   }
 
-  return { progress, isError, message, token, incrementProgress, authenticated }
+  return { progress, isError, message, token, incrementProgress, isAuthenticated }
 })
