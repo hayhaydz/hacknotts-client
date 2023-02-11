@@ -1,5 +1,5 @@
 <script setup>
-  import { ref } from 'vue' 
+  import { reactive, ref } from 'vue' 
   import Register from './Register.vue'
   import Login from './Login.vue'
   import Verify from './Verify.vue'
@@ -29,6 +29,11 @@
     </template>
     <template v-if="state.progress == 5">
       <NumberMemory :difficulty="9" />
+    </template>
+  </div>
+  <div>
+    <template v-if="state.isError">
+      <p>{{ state.message }}</p>
     </template>
   </div>
 </template>
