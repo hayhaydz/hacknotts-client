@@ -10,7 +10,7 @@
     msg: 'Remember the number'
   })
   const isDisabled = ref(true)
-  const countdown = ref(3)
+  const countdown = ref(2)
   const index = ref(0)
   const number = ref(0)
   const attempts = ref(0)
@@ -24,7 +24,7 @@
       if(attempts.value < 2) {
         attempts.value++
         index.value = 1
-        countdown.value = 5
+        countdown.value = 2
         form.msg = 'Try again'
         isDisabled.value = true
         input.value = ''

@@ -22,7 +22,7 @@
         countdown.value = 5
         msg.value = 'Try again'
         isDisabled.value = true
-        activeTile.value = 0
+        activeTile.value = null
         sequence.value = generateSequence()
         userSequence.value = []
         sequenceIterator = 0
@@ -43,7 +43,7 @@
   const generateSequence = () => {
     let seq = []
     for(let i=0;i<props.duration;i++) {
-      seq.push(Math.floor(Math.random() * ((props.cols ** 2) - 0 + 1) + 0))
+      seq.push(Math.floor(Math.random() * (((props.cols ** 2) - 1) - 0 + 1) + 0))
     }
 
     return seq

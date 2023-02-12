@@ -6,7 +6,7 @@
 
   const handleClick = () => {
     state.isAuthenticated = false
-    router.push('/login')
+    router.push('/')
   }
 </script>
 

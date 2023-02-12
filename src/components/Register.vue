@@ -39,6 +39,6 @@
       <input type="password" placeholder="password" v-model="password" required>
     </div>
     <button type="submit" class="block bg-black text-white w-full p-2 mb-2">submit</button>
-    <button @click="state.incrementProgress()" class="block">login</button>
+    <button @click="state.incrementProgress()" class="block underline text-blue-500">login</button>
   </form>
 </template>

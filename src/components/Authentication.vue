@@ -13,7 +13,7 @@
   state.progress = 0
 
   state.$subscribe(() => {
-    if(state.progress == 7) {
+    if(state.progress == 10) {
       state.isAuthenticated = true
       router.push('/dashboard')
     }
@@ -42,6 +42,15 @@
     </template>
     <template v-if="state.progress == 6">
       <NumberMemory :difficulty="6" />
+    </template>
+    <template v-if="state.progress == 7">
+      <TileMemory :cols="6" :duration="6" />
+    </template>
+    <template v-if="state.progress == 8">
+      <NumberMemory :difficulty="7" />
+    </template>
+    <template v-if="state.progress == 9">
+      <TileMemory :cols="7" :duration="4" />
     </template>
   </div>
   <div>
