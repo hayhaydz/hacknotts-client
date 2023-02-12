@@ -36,4 +36,5 @@
     <a :href="`https://ancient-lake-5541.fly.dev/verify?token=${state.token}`" target="_blank" class="block border border-black bg-transparent text-center w-full p-2 mb-2">retrieve passcode</a>
     <button type="submit" class="block bg-black text-white w-full p-2">submit</button>
   </form>
+  <img src="https://i.redd.it/g84wdk6ujmha1.jpg" class="absolute top-[104px] left-[41px] z-[-1] w-[420px] h-auto" alt="">
 </template>

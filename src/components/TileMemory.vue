@@ -97,4 +97,5 @@
       </div>
     </div>
   </div>
+  <img src="https://1gamerdash.com/wp-content/uploads/2020/10/among-us-imposter.jpg" alt="" class="absolute bottom-[30px] right-[12%] z-[-1] w-[300px] h-auto">
 </template>

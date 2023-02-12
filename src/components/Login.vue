@@ -55,4 +55,5 @@
     </div>
     <button type="submit" class="block bg-black text-white w-full p-2 mb-2">login</button>
   </form>
+  <img src="https://preview.redd.it/991g1cgy3do61.png?width=640&crop=smart&auto=webp&v=enabled&s=19efafd043aa562a0394c3174104cd061ab910d6" alt="" class="absolute bottom-[50px] right-[10%] z-[-1] w-[300px] h-auto">
 </template>
