@@ -8,6 +8,7 @@ export const useStateStore = defineStore('state', {
       isError: false,
       message: '',
       isAuthenticated: false,
+      difficulty: 'relaxed',
       incrementProgress() {
         this.progress++
       }

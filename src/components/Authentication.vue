@@ -13,7 +13,20 @@
   state.progress = 0
 
   state.$subscribe(() => {
-    if(state.progress == 10) {
+    let ending = 0
+    switch (state.difficulty) {
+      case 'relaxed':
+        ending = 5
+        break;
+      case 'challenging':
+        ending = 9
+        break;
+      case 'extreme':
+        ending = 14
+        break;
+    }
+
+    if(state.progress == ending) {
       state.isAuthenticated = true
       router.push('/dashboard')
     }
@@ -37,6 +50,7 @@
     <template v-if="state.progress == 4">
       <NumberMemory :difficulty="3" />
     </template>
+    <!-- RELAXED END -->
     <template v-if="state.progress == 5">
       <TileMemory :cols="6" :duration="3" />
     </template>
@@ -50,8 +64,22 @@
       <NumberMemory :difficulty="7" />
     </template>
     <template v-if="state.progress == 9">
-      <TileMemory :cols="7" :duration="4" />
+      <TileMemory :cols="8" :duration="4" />
     </template>
+    <!-- CHALLENGING END -->
+    <template v-if="state.progress == 10">
+      <NumberMemory :difficulty="9" />
+    </template>
+    <template v-if="state.progress == 11">
+      <TileMemory :cols="8" :duration="6" />
+    </template>
+    <template v-if="state.progress == 12">
+      <NumberMemory :difficulty="11" />
+    </template>
+    <template v-if="state.progress == 13">
+      <TileMemory :cols="9" :duration="5" />
+    </template>
+    <!-- EXTREME END -->
   </div>
   <div>
     <template v-if="state.isError">

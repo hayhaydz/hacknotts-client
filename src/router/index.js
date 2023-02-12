@@ -32,6 +32,17 @@ router.beforeEach(async (to, from) => {
     // redirect the user to the login page
     return { name: 'login' }
   }
+  if (
+    // make sure the user is authenticated
+    state.isAuthenticated &&
+    // ❗️ Avoid an infinite redirect
+    to.name === 'login'
+    &&
+    to.name !== 'dashboard'
+  ) {
+    // redirect the user to the login page
+    return { name: 'dashboard' }
+  }
 });
 
 export default router

@@ -33,7 +33,7 @@
 <template>
   <h4 class="mb-4">register</h4>
   <form action="#" @submit="handleSubmit">
-    <div class="flex flex-col gap-2 mb-2 [&>input]:border [&>input]:p-2">
+    <div class="flex flex-col gap-2 mb-4 [&>input]:border [&>input]:p-2">
       <input type="text" placeholder="username" v-model="username" required>
       <input type="email" placeholder="email" v-model="email" required>
       <input type="password" placeholder="password" v-model="password" required>

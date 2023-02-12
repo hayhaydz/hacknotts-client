@@ -35,6 +35,23 @@
     <div class="flex flex-col gap-2 mb-2 [&>input]:border [&>input]:p-2">
       <input type="text" placeholder="username" v-model="username">
       <input type="password" placeholder="password" v-model="password">
+      <fieldset>
+          <legend class="mb-2">Select a difficulty:</legend>
+          <div class="space-x-4">
+            <div class="inline-block space-x-1">
+              <input type="radio" id="relaxed" name="relaxed" value="relaxed" v-model="state.difficulty">
+              <label for="relaxed">Relaxed</label>
+            </div>
+            <div class="inline-block space-x-1">
+              <input type="radio" id="challenging" name="challenging" value="challenging" v-model="state.difficulty">
+              <label for="challenging">Challenging</label>
+            </div>
+            <div class="inline-block space-x-1">
+              <input type="radio" id="extreme" name="extreme" value="extreme" v-model="state.difficulty">
+              <label for="extreme">Extreme</label>
+            </div>
+          </div>
+      </fieldset>
     </div>
     <button type="submit" class="block bg-black text-white w-full p-2 mb-2">login</button>
   </form>
