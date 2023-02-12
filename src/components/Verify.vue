@@ -1,9 +1,7 @@
 <script setup>
   import { ref } from 'vue'
-  import { useRouter } from 'vue-router'
   import { useStateStore } from '../stores/state'
   const state = useStateStore()
-  const router = useRouter()
 
   const passcode = ref(null)
 
@@ -19,8 +17,7 @@
     response.json().then(async (data) => {
       if(data.status == 'success') {
         state.isError = false
-        state.isAuthenticated = true
-        router.push('/dashboard')
+        state.incrementProgress()
       } else {
         state.isError = true
       }

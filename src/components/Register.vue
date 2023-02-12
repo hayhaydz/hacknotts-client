@@ -38,7 +38,7 @@
       <input type="email" placeholder="email" v-model="email" required>
       <input type="password" placeholder="password" v-model="password" required>
     </div>
-    <button type="submit">submit</button>
+    <button type="submit" class="block bg-black text-white w-full p-2 mb-2">submit</button>
     <button @click="state.incrementProgress()" class="block">login</button>
   </form>
 </template>

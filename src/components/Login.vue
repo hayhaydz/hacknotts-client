@@ -36,6 +36,6 @@
       <input type="text" placeholder="username" v-model="username">
       <input type="password" placeholder="password" v-model="password">
     </div>
-    <button type="submit">login</button>
+    <button type="submit" class="block bg-black text-white w-full p-2 mb-2">login</button>
   </form>
 </template>

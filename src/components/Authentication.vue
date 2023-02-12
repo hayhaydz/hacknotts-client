@@ -1,13 +1,23 @@
 <script setup>
-  import { reactive, ref } from 'vue' 
   import Register from './Register.vue'
   import Login from './Login.vue'
   import Verify from './Verify.vue'
   import NumberMemory from './NumberMemory.vue'
+  import TileMemory from './TileMemory.vue'
 
+  import { useRouter } from 'vue-router'
   import { useStateStore } from '../stores/state'
   const state = useStateStore()
+  const router = useRouter()
+
   state.progress = 0
+
+  state.$subscribe(() => {
+    if(state.progress == 7) {
+      state.isAuthenticated = true
+      router.push('/dashboard')
+    }
+  })
 </script>
 
 <template>
@@ -22,13 +32,16 @@
       <Verify />
     </template>
     <template v-if="state.progress == 3">
-      <NumberMemory :difficulty="3" />
+      <TileMemory :cols="3" :duration="3" />
     </template>
     <template v-if="state.progress == 4">
-      <NumberMemory :difficulty="6" />
+      <NumberMemory :difficulty="3" />
     </template>
     <template v-if="state.progress == 5">
-      <NumberMemory :difficulty="9" />
+      <TileMemory :cols="6" :duration="3" />
+    </template>
+    <template v-if="state.progress == 6">
+      <NumberMemory :difficulty="6" />
     </template>
   </div>
   <div>
