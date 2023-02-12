@@ -33,7 +33,7 @@
     <div class="flex flex-col gap-2 mb-2 [&>input]:border [&>input]:p-2">
       <input type="number" placeholder="passcode" v-model="passcode">
     </div>
-    <a :href="`http://localhost:3080/verify?token=${state.token}`" target="_blank" class="block border border-black bg-transparent text-center w-full p-2 mb-2">retrieve passcode</a>
+    <a :href="`https://ancient-lake-5541.fly.dev/verify?token=${state.token}`" target="_blank" class="block border border-black bg-transparent text-center w-full p-2 mb-2">retrieve passcode</a>
     <button type="submit" class="block bg-black text-white w-full p-2">submit</button>
   </form>
 </template>
